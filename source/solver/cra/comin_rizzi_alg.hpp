@@ -4,7 +4,7 @@
 #include <vector>
 #include <set>
 #include <list>
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../common/dist_graph.hpp"
 #include "../../common/instance.hpp"
 #include "bellman_ford_alg.hpp"

@@ -1,7 +1,7 @@
 #ifndef H_SDTP_CP_H
 #define H_SDTP_CP_H
 
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../util/precise_timer.hpp"
 #include <ilcp/cp.h>
 #include <map>

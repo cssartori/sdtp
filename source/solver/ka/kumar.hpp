@@ -9,7 +9,7 @@
 #include "dist_alg_bf.hpp"
 #include "../../util/precise_timer.hpp"
 #include "bellman_ford_alg.hpp"
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 
 // Implementation of Kumar's Algorithm from https://www.aaai.org/Papers/AAAI/2004/AAAI04-011.pdf
 // Ref.: Kumar, T. S. (2004). A polynomial-time algorithm for simple temporal problems with piecewise constant domain preference functions. In AAAI (pp. 67-72).

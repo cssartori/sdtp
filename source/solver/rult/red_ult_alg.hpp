@@ -1,7 +1,7 @@
 #ifndef H_SDTP_RULT_ALG_H
 #define H_SDTP_RULT_ALG_H
 
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../common/instance.hpp"
 #include "two_ways_bf_alg.hpp"
 #include "../../util/precise_timer.hpp"

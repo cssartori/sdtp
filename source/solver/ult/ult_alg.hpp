@@ -1,7 +1,7 @@
 #ifndef H_SDTP_ULT_ALG_H
 #define H_SDTP_ULT_ALG_H
 
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../common/instance.hpp"
 #include "apsp_alg.hpp"
 #include "ult_model.hpp"

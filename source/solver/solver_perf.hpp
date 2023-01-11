@@ -3,7 +3,7 @@
 
 #include "../validator/validator.hpp"
 #include "../util/strfmt.hpp"
-#include "sdtp_solver.hpp"
+#include "solver.hpp"
 #include "../io/perf_values.hpp"
 
 #include <stdlib.h>

@@ -1,4 +1,4 @@
-#include "sdtp_solver_perf.hpp"
+#include "solver_perf.hpp"
 
 namespace sdtp{
 

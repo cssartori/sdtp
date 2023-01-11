@@ -12,6 +12,8 @@ BASE="../data"
 mkdir $BASE
 
 ./execute.sh "time" $BASE
+
+##cache experiments require super-user privilege
 ./execute.sh "cache" $BASE
 
 echo "Ending Experiments at "$(timestamp)

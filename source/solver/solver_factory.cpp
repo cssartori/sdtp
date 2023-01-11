@@ -1,4 +1,4 @@
-#include "sdtp_solver_factory.hpp"
+#include "solver_factory.hpp"
 #include "bfdc/bfdc_alg.hpp"
 #include "cra/comin_rizzi_alg.hpp"
 #include "ilp/ilp.hpp"

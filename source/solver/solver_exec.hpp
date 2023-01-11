@@ -4,7 +4,7 @@
 #include "../io/result.hpp"
 #include "../validator/validator.hpp"
 #include "../util/strfmt.hpp"
-#include "sdtp_solver.hpp"
+#include "solver.hpp"
 #include "../common/def.hpp"
 
 namespace sdtp{

@@ -1,7 +1,7 @@
 #ifndef H_SDTP_ILP_H
 #define H_SDTP_ILP_H
 
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../common/instance.hpp"
 #include "../../util/strfmt.hpp"
 #include "../../util/precise_timer.hpp"

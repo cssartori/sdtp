@@ -50,8 +50,8 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${CXX_FLAGS} -Wno-ignored-attributes")
 set( SdtpSrcFiles
   ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
   ${PROJECT_SOURCE_DIR}/source/io/result_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_factory.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_exec.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_exec.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/comin_rizzi_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/dijkstra_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/bellman_ford_alg.cpp
@@ -75,8 +75,8 @@ set( SdtpSrcFiles
 set( TestSrcFiles
   ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
   ${PROJECT_SOURCE_DIR}/source/io/result_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_factory.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_exec.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_exec.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/comin_rizzi_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/dijkstra_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/bellman_ford_alg.cpp
@@ -100,8 +100,8 @@ set( TestSrcFiles
 set( PerfSrcFiles
   ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
   ${PROJECT_SOURCE_DIR}/source/io/perf_values_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_factory.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/sdtp_solver_perf.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
+  ${PROJECT_SOURCE_DIR}/source/solver/solver_perf.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/comin_rizzi_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/dijkstra_alg.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/cra/bellman_ford_alg.cpp

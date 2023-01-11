@@ -1,7 +1,7 @@
 #ifndef H_SDTP_SOLVER_FACTORY_H
 #define H_SDTP_SOLVER_FACTORY_H
 
-#include "sdtp_solver.hpp"
+#include "solver.hpp"
 #include <random>
 
 namespace sdtp{

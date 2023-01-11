@@ -3,7 +3,7 @@
 
 #include <map>
 #include <algorithm>
-#include "../sdtp_solver.hpp"
+#include "../solver.hpp"
 #include "../../common/domain.hpp"
 #include "../../common/instance.hpp"
 #include "../../util/vec_queue.hpp"

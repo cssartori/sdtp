@@ -6,9 +6,9 @@
 #include "../io/result_io.hpp"
 #include "../io/instance_io.hpp"
 #include "../io/input.hpp"
-#include "../solver/sdtp_solver.hpp"
-#include "../solver/sdtp_solver_exec.hpp"
-#include "../solver/sdtp_solver_factory.hpp"
+#include "../solver/solver.hpp"
+#include "../solver/solver_exec.hpp"
+#include "../solver/solver_factory.hpp"
 #include "../io/result.hpp"
 #include <boost/program_options.hpp>
 #include <random>
