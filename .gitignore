@@ -1,0 +1,11 @@
+## for temporary files
+*~
+
+## do not include the build dir
+build/
+
+## remove auxiliary folders
+scripts/libertine
+scripts/linlib
+
+scripts/Rplots.pdf
