@@ -47,32 +47,8 @@ set(CXX_FLAGS "-Wall -Wno-array-bounds -O3 -std=c++17 -DIL_STD ${profiling}")
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${CXX_FLAGS} -Wno-ignored-attributes")
 
 ## set source files needed
-set( SdtpSrcFiles
-  ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/io/result_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/solver_exec.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/comin_rizzi_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/dijkstra_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/bellman_ford_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/util/heaps/sanders/knheap.C
-  ${PROJECT_SOURCE_DIR}/source/solver/ilp/ilp.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cp/cp.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/bfdc/bfdc_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ult/apsp_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ult/ult_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/rult/two_ways_bf_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/rult/red_ult_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dist_alg_bf.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/bellman_ford_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/kumar.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dist_alg_ja.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dijkstra_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dinic_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/validator/validator.cpp
-  )
 
-set( TestSrcFiles
+set( BaseSrcFiles
   ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
   ${PROJECT_SOURCE_DIR}/source/io/result_io.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
@@ -98,34 +74,14 @@ set( TestSrcFiles
   )
 
 set( PerfSrcFiles
-  ${PROJECT_SOURCE_DIR}/source/io/instance_io.cpp
   ${PROJECT_SOURCE_DIR}/source/io/perf_values_io.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/solver_factory.cpp
   ${PROJECT_SOURCE_DIR}/source/solver/solver_perf.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/comin_rizzi_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/dijkstra_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cra/bellman_ford_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/util/heaps/sanders/knheap.C
-  ${PROJECT_SOURCE_DIR}/source/solver/ilp/ilp.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/cp/cp.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/bfdc/bfdc_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ult/apsp_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ult/ult_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/rult/two_ways_bf_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/rult/red_ult_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dist_alg_bf.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/bellman_ford_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/kumar.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dist_alg_ja.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dijkstra_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/solver/ka/dinic_alg.cpp
-  ${PROJECT_SOURCE_DIR}/source/validator/validator.cpp
   )
 
 ## define the executable and the files to compile it
-add_executable(sdtp ${SdtpSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/sdtp.cpp")
-add_executable(stest ${TestSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/stest.cpp")
-add_executable(sperf ${PerfSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/sperf.cpp")
+add_executable(sdtp ${BaseSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/sdtp.cpp")
+add_executable(stest ${BaseSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/stest.cpp")
+add_executable(sperf ${BaseSrcFiles} ${PerfSrcFiles} "${PROJECT_SOURCE_DIR}/source/exec/sperf.cpp")
 
 ## link external libraries (e.g., math (m) and the boost libs found before)
 target_link_libraries(sdtp ${Boost_LIBRARIES} cp ilocplex concert cplex m pthread dl)
